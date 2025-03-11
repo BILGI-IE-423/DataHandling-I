@@ -16,3 +16,20 @@
 ### Task 4: Importing a Limited Number of Rows
 - Import **only 4 rows** from the dataset.
 - Display the imported data.
+
+---
+
+## Exercise 2: Handling Missing Data and Importing Excel Files
+
+### Task 1: Recognizing Missing Data
+- Import the dataset **microbiome_missing.csv** and display the first 10 rows.
+- Observe how Pandas automatically recognizes `NA` and empty fields as missing values.
+
+### Task 2: Checking for Missing Values
+- Use Pandas to check for missing values in the dataset.
+- Display the first 10 rows of the dataset with missing value indicators.
+
+### Task 3: Importing Excel Data
+- Import an Excel file **microbiome_MID2.xls**.
+- Read the sheet named **"Sheet 1"** without using headers.
+- Display the first 5 rows of the imported data.
