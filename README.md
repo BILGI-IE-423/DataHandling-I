@@ -140,3 +140,33 @@
 ### Task 6: Interpolating Missing Values
 - Use `fillna(method='ffill')` to forward-fill missing values.
 - Replace missing values in the `treatment` column with its **mean value**.
+
+---
+
+## Exercise 6: Data Summarization and Plotting
+
+### Task 1: Summarizing Data
+- Use `sum()` to calculate column-wise totals in the **baseball** dataset.
+- Use `mean(numeric_only=True)` to calculate averages for numeric columns.
+
+### Task 2: Handling Missing Data in Summarization
+- Compute the mean of the `treatment` column in `data2`.
+- Compute the mean while **allowing `NaN` values to propagate** (`skipna=False`).
+
+### Task 3: Summarizing Across Rows
+- Calculate the sum of **extra bases (`X2b`, `X3b`, `hr`)** for each player.
+- Sort the results in descending order and display the top 20 players.
+
+### Task 4: Correlation and Covariance
+- Compute the **covariance** between **home runs (`hr`)** and **doubles (`X2b`)**.
+- Compute the **correlation** between **home runs (`hr`)** and **doubles (`X2b`)**.
+- Compute the **correlation** between **at-bats (`ab`)** and **hits (`h`)**.
+
+### Task 5: Plotting
+- Create **scatter plots** for:
+  - `hr` (home runs) vs `X2b` (doubles)
+  - `ab` (at-bats) vs `h` (hits)
+- Create **histograms** for:
+  - `ab` (at-bats)
+  - `h` (hits)
+- Compare the scatterplots and histograms. Do the histograms alone indicate a correlation?
