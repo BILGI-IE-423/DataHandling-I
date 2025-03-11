@@ -114,7 +114,7 @@
 ## Exercise 5: Handling Missing Data
 
 ### Task 1: Identifying Missing Data
-- Create a `Series` with missing values (`np.nan`, `None`, and a string).
+- Create a `Series` with missing values (`np.nan`, `None`, and a string) **foo = pd.Series([np.nan, -3, None, 'foobar']**.
 - Use `isnull()` to identify missing values.
 
 ### Task 2: Dropping Missing Data
