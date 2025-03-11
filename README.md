@@ -103,9 +103,7 @@
 ### Task 5: Calculating On-Base Percentage (OBP)
 - Compute the **On-Base Percentage (OBP)** for each player using the formula:
 
-  \[
-  OBP = \frac{H + BB + HBP}{AB + BB + HBP + SF}
-  \]
+  $$obp = \frac{h + bb + hbp}{ab + bb + hbp + sf}$$
 
 - Add a new column **`obp`** to the `baseball` DataFrame.
 - Ensure that if the denominator is **zero**, the OBP is set to **0.0**.
@@ -134,13 +132,6 @@
   - Set missing values in the **`year`** column to **2013**.
   - Set missing values in the **`treatment`** column to **2**.
 
-### Task 5: Filling Missing Values In-Place
-- Use the `inplace=True` argument to fill missing values in the `treatment` column permanently.
-
-### Task 6: Interpolating Missing Values
-- Use `fillna(method='ffill')` to forward-fill missing values.
-- Replace missing values in the `treatment` column with its **mean value**.
-
 ---
 
 ## Exercise 6: Data Summarization and Plotting
@@ -149,24 +140,30 @@
 - Use `sum()` to calculate column-wise totals in the **baseball** dataset.
 - Use `mean(numeric_only=True)` to calculate averages for numeric columns.
 
-### Task 2: Handling Missing Data in Summarization
-- Compute the mean of the `treatment` column in `data2`.
-- Compute the mean while **allowing `NaN` values to propagate** (`skipna=False`).
-
-### Task 3: Summarizing Across Rows
-- Calculate the sum of **extra bases (`X2b`, `X3b`, `hr`)** for each player.
-- Sort the results in descending order and display the top 20 players.
-
-### Task 4: Correlation and Covariance
-- Compute the **covariance** between **home runs (`hr`)** and **doubles (`X2b`)**.
-- Compute the **correlation** between **home runs (`hr`)** and **doubles (`X2b`)**.
+### Task 2: Correlation and Covariance
+- Compute the **covariance** and **correlation** between **home runs (`hr`)** and **doubles (`X2b`)**.
 - Compute the **correlation** between **at-bats (`ab`)** and **hits (`h`)**.
 
-### Task 5: Plotting
-- Create **scatter plots** for:
-  - `hr` (home runs) vs `X2b` (doubles)
-  - `ab` (at-bats) vs `h` (hits)
-- Create **histograms** for:
-  - `ab` (at-bats)
-  - `h` (hits)
-- Compare the scatterplots and histograms. Do the histograms alone indicate a correlation?
+### Task 3: Plotting
+- Create **scatter plots** and **histograms** to analyze correlations.
+
+---
+
+## Exercise 7: Writing Data to Files
+
+### Task 1: Exporting Data to CSV
+- Save the **microbiome (`mb`)** dataset to a CSV file named `"mb.csv"`.
+- Use the `to_csv` method with different options:
+  - Change the delimiter (`sep`).
+  - Modify how missing values are represented (`na_rep`).
+  - Exclude the index (`index=False`).
+
+### Task 2: Storing Data in Binary Format
+- Save the **baseball** dataset using `to_pickle("baseball_pickle")`.
+- Reload the pickle file using `pd.read_pickle("baseball_pickle")` and display the first 5 rows.
+
+---
+
+## References
+
+[1] [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do) - Wes McKinney
