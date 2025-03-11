@@ -72,3 +72,41 @@
 ### Task 9: Filtering Data Using `isin`
 - Use the `isin` method on **baseball** to find all players who played for the **Los Angeles Dodgers (LAN)** or the **San Francisco Giants (SFN)**.
 - Count how many records contain these values.
+
+---
+
+## Exercise 4: Hierarchical Indexing, Operations, Sorting, and Calculating OBP
+
+### Task 1: Hierarchical Indexing
+- Create a hierarchical index using **year**, **team**, and **player**.
+- Check if the index is unique.
+- Retrieve **Julio Franco (`francju01`)** who played for the **Atlanta Braves (`ATL`) in 2007** using this hierarchical index.
+
+### Task 2: Performing Operations on DataFrames
+- Create two `Series` objects representing **home runs in 2006** and **home runs in 2007**.
+- Set the index to the **player** column.
+- Add these two Series together to calculate **two-year home run totals**.
+- Display the first 20 results.
+- Identify the players that appear in **both years**.
+
+### Task 3: Handling Missing Data in Operations
+- Use the `add` method with `fill_value=0` to replace missing values with **zero** in the two-year home run totals.
+- Display the first 20 results.
+
+### Task 4: Sorting Data
+- Sort the dataset by index in **ascending order** and display the first 5 rows.
+- Sort the dataset by index in **descending order** and display the first 5 rows.
+- Sort **columns** in ascending order.
+- Sort the `baseball` dataset by **home runs (hr)** in descending order and display the top 10 players.
+- Sort by **stolen bases (`sb`)** in descending order and **caught stealing (`cs`)** in ascending order.
+
+### Task 5: Calculating On-Base Percentage (OBP)
+- Compute the **On-Base Percentage (OBP)** for each player using the formula:
+
+  \[
+  OBP = \frac{H + BB + HBP}{AB + BB + HBP + SF}
+  \]
+
+- Add a new column **`obp`** to the `baseball` DataFrame.
+- Ensure that if the denominator is **zero**, the OBP is set to **0.0**.
+- Return the ordered series of **OBP values**.
