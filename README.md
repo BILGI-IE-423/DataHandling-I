@@ -103,9 +103,7 @@
 ### Task 5: Calculating On-Base Percentage (OBP)
 - Compute the **On-Base Percentage (OBP)** for each player using the formula:
 
-  \[
-  OBP = \frac{H + BB + HBP}{AB + BB + HBP + SF}
-  \]
+  $$obp = \frac{h + bb + hbp}{ab + bb + hbp + sf}$$
 
 - Add a new column **`obp`** to the `baseball` DataFrame.
 - Ensure that if the denominator is **zero**, the OBP is set to **0.0**.
