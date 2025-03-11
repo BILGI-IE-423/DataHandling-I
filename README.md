@@ -103,8 +103,40 @@
 ### Task 5: Calculating On-Base Percentage (OBP)
 - Compute the **On-Base Percentage (OBP)** for each player using the formula:
 
-  $$obp = \frac{h + bb + hbp}{ab + bb + hbp + sf}$$
+  \[
+  OBP = \frac{H + BB + HBP}{AB + BB + HBP + SF}
+  \]
 
 - Add a new column **`obp`** to the `baseball` DataFrame.
 - Ensure that if the denominator is **zero**, the OBP is set to **0.0**.
 - Return the ordered series of **OBP values**.
+
+---
+
+## Exercise 5: Handling Missing Data
+
+### Task 1: Identifying Missing Data
+- Create a `Series` with missing values (`np.nan`, `None`, and a string).
+- Use `isnull()` to identify missing values.
+
+### Task 2: Dropping Missing Data
+- Use `dropna()` to remove missing values.
+- Filter out missing values using `notnull()`.
+
+### Task 3: Dropping Rows with Missing Values
+- Load a dataset `data` containing missing values.
+- Use `dropna()` to drop rows with any missing values.
+- Use `dropna(how='all')` to drop rows where **all** values are missing.
+
+### Task 4: Filling Missing Values
+- Create a copy of the dataset (`data2`) and replace all missing values with **0**.
+- Fill missing values in specific columns:
+  - Set missing values in the **`year`** column to **2013**.
+  - Set missing values in the **`treatment`** column to **2**.
+
+### Task 5: Filling Missing Values In-Place
+- Use the `inplace=True` argument to fill missing values in the `treatment` column permanently.
+
+### Task 6: Interpolating Missing Values
+- Use `fillna(method='ffill')` to forward-fill missing values.
+- Replace missing values in the `treatment` column with its **mean value**.
